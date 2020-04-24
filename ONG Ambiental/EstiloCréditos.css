@@ -1,0 +1,136 @@
+body{
+    margin: 0 auto;
+    font-size: 0.85em;
+    font-family:  Quicksand;
+    background: url('IBAGENS/FontCandy%20(7).png');
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}
+                                    /* ↓MENU↓*/
+nav{
+    position: fixed;
+    width: 100%;
+    background-color: black;
+    margin: 0;
+    text-align: right;
+    
+    
+}
+nav ul {
+    list-style-type: none;
+    margin-top: -1.2em;
+    margin-bottom: 0em;
+}
+
+nav ul li {
+    display: inline-block;
+    padding: 1em;
+    cursor: pointer;   
+}
+
+nav ul li a {
+    padding: 0.93em;
+    display: block;
+    color: white;
+    text-decoration: none;   
+}
+    
+nav ul li:hover {
+    background-color: #113811;
+    transition-duration: 0.8s;
+    
+}
+
+nav ul ul{
+    position: absolute;
+    width: 15%;
+    background: black;
+    margin-top: 1em;
+    margin-left: -1.0em;
+    padding: 0em;
+    text-align: left;
+    display: none;
+}
+    
+ nav ul ul li {
+ display: block;
+}
+
+nav ul li:hover > ul { 
+    display: block;
+    }
+
+div.LOGO{
+    position: absolute;
+    padding: 1.0ex 5ex;
+    height: 9.5ex;
+    float: left;      
+}
+                                  /* FIM DO MENU*/
+
+h1{
+    margin: 0;
+    padding-top: 10ex;
+    text-align: center;
+    font-size: 2em;
+}
+
+#NOME{
+    position: fixed;
+    width: 100%;
+    text-align: center;
+    margin: 0;
+}
+
+#NOME ul {
+    list-style-type: none;
+    margin-top: 15ex;
+}
+
+#NOME ul li{
+    display: inline-block;
+    padding: 2ex;
+    color: white;
+    font-size: 1.2em;        
+}
+
+#NOME ul li a{
+    color: white;
+    text-decoration: none;
+    display: block;
+}
+
+#NOME ul li:hover {
+    background-color: #113811;
+    transition-duration: 1s;
+    border-radius: 20em;
+    
+}
+
+#carta{
+    font-size: 3em;
+}
+
+                                   /* ↓RODAPÉ↓*/    
+
+/*footer{
+    clear:both;
+    border-top: 0ex solid #fff;
+    background-color: rgba(0,0,0,0.9);
+}
+
+footer p{
+    color: white;
+    text-align: center;
+    margin-top: 25.5ex;
+    padding: 1ex;
+    font-size: 1.1rem;
+}  
+
+footer a{
+    color: #055105;
+    text-decoration: underline;
+}
+                                  /*FIM DO RODAPÉ*/
+ 

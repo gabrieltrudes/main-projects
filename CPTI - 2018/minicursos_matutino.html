@@ -1,0 +1,833 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<title>Evento | CPTI</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+
+    <!-- Jquery -->
+    <script
+    src="https://code.jquery.com/jquery-3.3.1.js"
+    integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+    crossorigin="anonymous"></script>
+
+    <script src="java.js"></script>
+
+    <!-- Carousel CSS -->
+    <link rel="stylesheet" type="text/css" href="carousel.css">
+
+    <!-- Ícone CPTI -->
+    <link rel="icon" href="imagens/cpti_icon.png" type="image/x-icon"/> 
+    
+    <!--Fontes-->
+    <link href="https://fonts.googleapis.com/css?family=Oswald|Quicksand" rel="stylesheet">
+
+	<style>
+
+	body {
+			position: relative;
+			background-color: #E9E9E9;
+            font-family: 'Quicksand', sans-serif;
+            font-weight: 500;
+		}
+
+		.navbar {
+			padding: 0;
+			background-color: #465C8B;
+            font-family: 'Oswald', sans-serif;
+		}
+
+		#logo {
+			
+		}
+		
+		.navbar-nav {
+			margin-left: 20rem;
+		}
+
+		.dropbtn {
+			background-color: 
+#465C8B;
+			color: ghostwhite;
+			padding: 1rem;
+			font-size: 1rem;
+			border: none;
+			width: 10rem;
+		}
+
+		.dropbtn:hover {
+			color: ghostwhite;	
+		}
+
+		.dropdown {
+			position: relative;
+			display: inline-block;
+		}
+
+		.dropdown-content {
+			display: none;
+			position: absolute;
+			background-color: #465C8B;
+			min-width: 10rem;
+			box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+			z-index: 1;
+		}
+
+		.dropdown-content a {
+			color: white;
+			padding: 1rem 1rem;
+			text-decoration: none;
+			display: block;
+		}
+
+		.dropdown-content a:hover {
+			border-left: 3rem ridge #A4D555;
+			transition-duration: 0.5s;
+		}
+
+		.dropdown-content a:hover {background-color: #465C8B;}
+
+		.dropdown:hover .dropdown-content {display: block;}
+
+		.dropdown:hover .dropbtn {background-color: #A4D555; color: ghostwhite;}
+
+		#palestras_matutino, #palestras_noturno, #minicursos_matutino, #minicursos_noturno  {
+			padding-top: 4rem;
+		}
+
+		#evento {
+			color: black;
+		}
+
+		.palestrantes {
+			color: lightyellow;
+		}
+
+		.palestrantes:hover {
+			color: yellow;
+		}
+
+		#evento .row {
+			margin-bottom: 2rem; 
+			padding: 1rem;
+			border-radius: 4rem;
+			transition-duration: 0.4s;
+		}
+
+		#evento .row:hover {
+			border-radius: 0.5rem;
+		}
+
+		.inscrevase {
+			padding: rem;
+			width: 8rem;
+			height: 2.5rem;
+			background-color: #FF9140;
+			color: white;
+		}
+
+		.inscrevase:hover {
+			color:#FF9140;
+			background-color: #465C8B;
+		}
+
+		#rodape {
+			background-color: black;
+			color: ghostwhite;
+			font-family: 'Quicksand', sans-serif;
+			padding: 1rem;
+			bottom: 0;
+			position: absolute;
+			width: 100%;
+		}
+
+		.rodape {
+			padding-top: 20rem;
+		}
+
+
+		#link_unip {
+			font-family: 'Quicksand', sans-serif;
+		}
+
+		#link_unip img{
+			margin-bottom: 0.2rem;
+		}
+
+		#link_unip:hover img {
+			width: 16px;
+			height: 16px;
+		}
+
+		#mapa {
+			position: relative;
+			padding-bottom: 57.142857142857%;
+			height: 0;
+		}
+
+		#mapa iframe {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+		}
+
+		/* Ajustes media queries */
+		/* Extra small devices (portrait phones, less than 576px) */
+		@media (max-width: 575.98px) { 
+
+			body {
+				background-color: ghostwhite;
+			}
+
+			.navbar-nav {
+				margin-left: 0rem;
+				margin-top: 1rem;
+			}
+
+			#logo {
+				margin-left: 1rem;
+			}
+
+			.dropbtn {
+				width: 100%;
+				
+			}
+
+			.dropdown-content {
+
+				min-width: 100%;
+
+			}
+
+			.rodape {
+				padding-top: 40rem;
+			}
+
+
+		}
+
+		/* Small devices (landscape phones, 576px and up) */
+		@media (min-width: 576px) and (max-width: 767.98px) {
+
+			body {
+				background-color: ghostwhite;
+			}
+
+			.navbar-nav {
+				margin-left: 0rem;
+				margin-top: 1rem;
+			}
+
+			#logo {
+				margin-left: 1rem;
+			}
+
+			.dropbtn {
+				width: 100%;
+				
+			}
+
+			.dropdown-content {
+
+				min-width: 100%;
+
+			}
+
+		}
+
+		/* Medium devices (tablets, 768px and up) */
+		@media (min-width: 768px) and (max-width: 991.98px) { 
+
+			body {
+				background-color: ghostwhite;
+			}
+
+			.navbar-nav {
+				margin-left: 0rem;
+				margin-top: 1rem;
+			}
+
+			#logo {
+				margin-left: 1rem;
+			}
+
+			.dropbtn {
+				width: 100%;
+				
+			}
+
+			.dropdown-content {
+				position: absolute;;
+				min-width: 100%;
+			}
+
+		}
+
+
+  	</style>
+
+</head>
+
+<body>
+
+	<!-- Menu -->
+	<nav class="navbar navbar-expand-lg fixed-top">
+		<div class="container">
+			<a href="index.html" id="logo"><img src="imagens/Logo%204.png" width="57" height="57" title="CPTI"></a>
+
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menu_evento" 
+			aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				<img src="imagens/Menu%201.png">
+			</button>
+		
+			<div class="collapse navbar-collapse" id="menu_evento">
+				<ul class="navbar-nav mr-auto">
+					<div class="dropdown">
+						<button class="dropbtn">PALESTRAS&nbsp<img src="imagens/icons8-ordem-descendente-48.png" 
+							width="12px" height="12px"></button>
+						<div class="dropdown-content">
+							<a href="palestras_matutino.html#evento">Matutino</a>
+							<a href="palestras_noturno.html#evento">Noturno</a>
+						</div>
+					</div>&nbsp
+
+					<div class="dropdown">
+						<button class="dropbtn">MINICURSOS&nbsp<img src="imagens/icons8-ordem-descendente-48.png" 
+							width="12px" height="12px"></button>
+						<div class="dropdown-content">
+							<a href="minicursos_matutino.html#evento">Matutino</a>
+							<a href="minicursos_noturno.html#evento">Noturno</a>
+						</div>
+					</div>
+				</ul>
+			</div>
+		</div>
+	</nav>
+	
+	<!-- Slide -->
+	<div id="slide" class="carousel slide" data-ride="carousel" style="margin-top: 0.54rem;">
+		<ol class="carousel-indicators">
+			<li data-target="#slide" data-slide-to="0" class="active"></li>
+			<li data-target="#slide" data-slide-to="1"></li>
+			<li data-target="#slide" data-slide-to="2"></li>
+			<li data-target="#slide" data-slide-to="3"></li>
+			<li data-target="#slide" data-slide-to="4"></li>
+		</ol>
+		<div class="carousel-inner">
+
+				<div class="carousel-item active">
+				<img class="first-slide" src="imagens/FUNDO-SLIDE3.png" alt="First slide">	
+			</div>
+					
+			<div class="carousel-item">
+				<img class="second-slide" src="imagens/FUNDO-SLIDE4.png" alt="Second slide">
+				
+			</div>
+
+			<div class="carousel-item">
+				<img class="third-slide" src="imagens/FUNDO-SLIDE5.png" alt="Third slide">
+			</div>
+
+			<div class="carousel-item">
+				<img class="third-slide" src="imagens/FUNDO-SLIDE6.png" alt="fourth slide">
+			</div>
+
+			<div class="carousel-item">
+				<img class="third-slide" src="imagens/FUNDO-SLIDE7.png" alt="fifth slide">
+			</div>
+		</div>
+
+		<a class="carousel-control-prev" href="#slide" role="button" data-slide="prev">
+			<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+			<span class="sr-only">Previous</span>
+		</a>
+		<a class="carousel-control-next" href="#slide" role="button" data-slide="next">
+			<span class="carousel-control-next-icon" aria-hidden="true"></span>
+			<span class="sr-only">Next</span>
+		</a>	
+	</div>
+	   	
+	<!-- Evento -->
+	<div class="container" id="evento" style="padding-top: 5rem; margin-bottom: 10%;">
+
+		<div class="row text-center" style="margin-bottom: 2.5rem;">
+			<div class="col-lg-12">
+				<h2>MINICURSOS (MATUTINO)</h2>
+			</div>
+		</div>
+
+		<div class="row text-center" style="background-color: #A4D555;" id="palestras_matutino">
+			<div class="col-lg-2">
+				
+                <p>
+					9:00hs às 
+					10:15 hs
+					Intervalo
+					10:45hs
+					12:00hs
+				</p>
+			</div>
+			<div class="col-lg-3">
+				<p style="font-size: 1.5rem; font-weight: 300;">Facebook React Native: Introdução e Desenvolvimento.
+				</p>
+			</div>
+			<div class="col-lg-3">
+				<p>O que é o React Native? Introdução à plataforma híbrida e desenvolvimento.
+
+					Software necessário: Android Studio ou Xcode, NodeJs, Java JDK, Windows10 / macOS("Sierra ou Hight Sierra").
+				</p>
+			</div>
+			<div class="col-lg-2">
+				<p><a href="" data-toggle="modal" data-target="#iaco" class="palestrantes">Iaco Cesar Lopes</a></p>
+			</div>
+			<div class="col-lg-2">
+				<p><a href="" class="btn btn-default inscrevase">Inscreva-se</a></p>
+			</div>
+
+		</div>
+
+		<div class="row text-center" style="background-color: #A4D555;">
+			<div class="col-lg-2">
+
+                <p>
+					9:00hs às 
+					10:15 hs
+					Intervalo
+					10:45hs
+					12:00hs
+				</p>
+			</div>
+			<div class="col-lg-3">
+				<p style="font-size: 1.5rem; font-weight: 500; font-size: 1.5rem;">Título: Fundamentos do framework scrum
+				</p>
+			</div>
+			<div class="col-lg-3">
+				<p>Neste curso aprenderemos os principais fundamentos do framework scrum, através da dinâmica iremos conhecer na práticas seus valores, suas regras, as responsabilidade de cada papel, a importância dos eventos e como funciona os fluxos, além disso, vamos aprender como aplicar o scrum para que o projeto tenha entregas constantes.
+
+					O que será abordado? 
+
+					• Manifesto Ágil
+					• Definição do Scrum
+					• Visão geral do framework
+					• Papeis 
+					• Eventos
+					• Artefatos do Scrum
+				</p>
+			</div>
+			<div class="col-lg-2">
+				<p><a href="" data-toggle="modal" data-target="#deysiane" class="palestrantes">Deysiane Vencerlêncio de Sousa
+				</a></p>
+			</div>
+			<div class="col-lg-2">
+				<p><a href="" class="btn btn-default inscrevase">Inscreva-se</a></p>
+			</div>
+		</div>
+
+	</div>
+
+	<!--Mini currículos dos palestrantes-->
+	<section>
+		<div class="modal fade" id="bruno_ortolani" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h1 class="modal-title">Bruno Ortolani</h1>
+					</div>
+					<div class="modal-body">
+						Bruno Ortolani se formou em Análises de Sistemas na PUC Campinas. Ele tem MBA em Marketing e título de Especialista em Gerenciamento de Produto e Marca, ambos pela FGV.  Bruno trabalhou na Lenovo durante 3 anos antes de ir para a HP Brasil, em 2014. Começou como Gerente de Produto para Acessórios e Software para Varejo e Corporativo e em 2016 assumiu a área de Notebooks.
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-outline-info"
+						data-dismiss="modal">Fechar</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="modal fade" id="edilson" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h1 class="modal-title">Prof. Dr. Edison Monteiro </h1>
+					</div>
+					<div class="modal-body">
+						Sem informações.
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-outline-info"
+						data-dismiss="modal">Fechar</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="modal fade" id="alfredo" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h1 class="modal-title">Alfredo Heiss</h1>
+					</div>
+					<div class="modal-body">
+						Sem informações.
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-outline-info"
+						data-dismiss="modal">Fechar</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="modal fade" id="rodrigo" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h1 class="modal-title">Rodrigo Domingues (Head of Digital Business)</h1>
+					</div>
+					<div class="modal-body">
+						Rodrigo lidera a linha de negócios de Digital Business na Cognizant Brasil e tem ajudado os clientes a vencer nesta nova era Digital. Trilhar um caminho sem volta e a tomar proveito da união do atual com o novo, criando iniciativas transformadoras, novos negócios digitais e também melhorando a experiência dos nossos clientes. Durante toda sua carreira, Rodrigo desenvolveu projetos inovadores e transformadores, como a criação de um Centro de Inovação, liderança no primeiro projeto utilizando RFID em grande escala em 2002, época em que a tecnologia ainda era imatura no mundo, em uma empresa de consultoria de inovação, construindo soluções para a Gestão de Conhecimento e Inovação e também desenvolvendo estratégias digitais, liderando a transformação digital em uma grande empresa de alimentos.
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-outline-info"
+						data-dismiss="modal">Fechar</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="modal fade" id="iaco" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h1 class="modal-title">Iaco Cesar Lopes</h1>
+					</div>
+					<div class="modal-body">
+						Formação: Bacharel em Ciência da Computação na Universidade Paulista (UNIP – Santos) em 06/2016. 
+						Analista Desenvolvedor Sênior na empresa Alelo Brasil, desenvolve aplicativos para dispositivos moveis nas plataformas Android e iOS.
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-outline-info"
+						data-dismiss="modal">Fechar</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="modal fade" id="deysiane" tabindex="-1" role="dialog" 
+		aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h1 class="modal-title">Deysiane Vencerlêncio de Sousa</h1>
+					</div>
+					<div class="modal-body">
+						Formação: Bacharel em Ciência da Computação pela Universidade Paulista (UNIP -Santos) em (12/2015)  e Pós-Graduação em Pericia Forense Digital. Ela faz parte da comunidade Devs java girl e atualmente é programadora Java na Concrete Solutions. Possui Certificação de Scrum Master (CSM), desde 2016 trabalha com times ágeis, aplicando o framework em seu dia a dia profissional. Trabalhou como analista java Pleno na Age Technology.
+						Cargo: Programadora Java Pleno na Concrete Solutions
+						Certificação: Scrum Master (PSM) - Scrum Alliance
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-outline-info"
+						data-dismiss="modal">Fechar</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="modal fade" id="william" tabindex="-1" role="dialog" 
+		aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h1 class="modal-title">William Miranda de Jesus</h1>
+					</div>
+					<div class="modal-body">
+						Simpatizante da área de Datascience tenho atuado como programador Java desde 2009, trabalho hoje na Empresa SulAmérica onde tenho desenvolvido microserviços  em Java, Golang e NodeJs, tanto on-premise como no Cloud da Google. Tenho focado meu estudo para  Datascience desde 2017
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-outline-info"
+						data-dismiss="modal">Fechar</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="modal fade" id="jhonson" tabindex="-1" role="dialog" 
+		aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h1 class="modal-title">Jhonson Junior</h1>
+					</div>
+					<div class="modal-body">
+						Sem informações.
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-outline-info"
+						data-dismiss="modal">Fechar</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="modal fade" id="gilmar" tabindex="-1" role="dialog" 
+		aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h1 class="modal-title">Gilmar Aquino</h1>
+					</div>
+					<div class="modal-body">
+						Sem informações.
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-outline-info"
+						data-dismiss="modal">Fechar</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="modal fade" id="bianca" tabindex="-1" role="dialog" 
+		aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h1 class="modal-title">Bianca da Silva Gois</h1>
+					</div>
+					<div class="modal-body">
+						Formação: Bacharel em Ciência da Computação pela Universidade Paulista (UNIP -Santos) em (12/2016). 
+						Atualmente trabalha na Indra Brasil S.A, como trainee de sistemas, atuando como funcional SAP-FI. Realizando atendimento de chamados WO (ordem de serviço), espelho de atendimento do tipo INC (incidente), demandas, testes de sistemas e funcionalidades e elaboração de documentações. Atuando no mercado de telecomunicações, com tecnologia SAP.
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-outline-info"
+						data-dismiss="modal">Fechar</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="modal fade" id="tamires" tabindex="-1" role="dialog" 
+		aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h1 class="modal-title">Tamires Alcântara de Arcanjo</h1>
+					</div>
+					<div class="modal-body">
+						Formação: Bacharel em Ciência da Computação pela Universidade Paulista (UNIP -Santos) em (12/2016). Atualmente na empresa Nimbi S/A – Analista de Suporte JR, como Responsável pela área de suporte N1 e N2 do escritorio de São Paulo, gerenciamento de aplicações, sistema ERP - Jira, manutenção preventiva, corretiva e configuração de hardware, software e telefonia IP, gerenciamento de facilites, controle de ativos e controle de acessos, criação e configuração de perfil de usuário em active directory.
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-outline-info"
+						data-dismiss="modal">Fechar</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="modal fade" id="suellen" tabindex="-1" role="dialog" 
+		aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h1 class="modal-title">Suellen</h1>
+					</div>
+					<div class="modal-body">
+						Formação: Bacharel em Ciência da Computação pela Universidade Paulista (UNIP -Santos) em 12/2016.
+						Atualmente trabalha na HOLDING CLUBE como Assistente de Suporte. Onde as principais atividades: Suporte funcional aos chamados referentes ao sistema ERP Microsoft Dynamics AX 2009. Auxílio na execução de processos, cadastro/atualização de informações das empresas do grupo, parametrizações de regras de negócios, testes de customizações propostas pelo gestor aos desenvolvedores (SPECS), correção de processos, ajustes no sistema, etc. Pequenos ajustes no código fonte (X++).
+						11/2014 – 11/2016 AGEM Agência Metropolitana da Baixada Santista
+						•	Cargo: Estagiário em TIC. (FUNDAP).
+						•	Principais atividades:  Suporte direto ao usuário. Controle de chamados internos e externos (telefonia/computadores). Backup, restauração, recuperação e configuração de SOs (Windows 7, 8, 10 e Linux). Cadastro e gerenciamento de novos usuários no servidor (Windows Server 2008, AD). Instalação/configuração de impressoras em rede.
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-outline-info"
+						data-dismiss="modal">Fechar</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	
+	<!-- Rodapé -->
+    <div class="rodape">
+    <div class="container-fluid" align="center" id="rodape">
+
+	    <div class="container">
+	        <div class="row">
+	            <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+	                
+	                <div id="mapa">
+	            	<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3646.4808448195213!2d-46.33407068550178!3d-23.94343108169638!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce037b0339a809%3A0x6f43dba55e64599!2sUnip+Santos+-+Campus+II+-+Rangel!5e0!3m2!1spt-BR!2sbr!4v1536800874221" width="350" height="200" frameborder="0" style="border:0" allowfullscreen></iframe>
+	            	</div>
+
+	            </div>
+
+	            <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+
+	                <p><a id="link_unip" href="http://www.unip.br/presencial/universidade/campi/santos2.aspx" target="_blank"   style="color: dodgerblue">UNIP Santos - Campus II - Rangel
+	                <img src="imagens/acimadirbra.png" width="15px" height="15px"></a></p>
+
+	                <p><a>Endereço: Av. Francisco Manoel - Vila Mathias, Santos - SP, 11045-300</a></p>
+
+	                <p><a>Telefone: (13) 4009-2000</a></p>
+
+	            </div>
+
+	            <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+
+		            <div class="row justify-content-center">
+
+		                <div id="in_div" title="Instagram UNIP">
+
+		                    <a><img id="in" src="imagens/in.png" class="icone"></a>
+		                    <a href="https://www.instagram.com/_unipoficial/" target="_blank">
+		                        <img id="inhover" src="imagens/inhover.png" class="icone" style="display: none;">
+		                    </a>
+		                    
+		                </div>&nbsp&nbsp&nbsp
+
+		                <div id="fb_div" title="Facebook UNIP">
+
+		                    <a><img id="fb" src="imagens/fb.png" class="icone"></a>
+		                    <a href="https://www.facebook.com/UNIPoficial/" target="_blank">
+		                        <img id="fbhover" src="imagens/fbhover.png" class="icone" style="display: none;">
+		                    </a>
+
+		                </div>&nbsp&nbsp&nbsp
+
+		                <div id="yt_div" title="Youtube UNIP">
+
+		                    <a><img id="yt" src="imagens/yt.png" class="icone"></a>
+		                    <a href="https://www.youtube.com/user/UNIPOficial/videos" target="_blank">
+		                        <img id="ythover" src="imagens/ythover.png" class="icone" style="display: none;">
+		                    </a>
+
+		                </div>&nbsp&nbsp&nbsp
+
+		                <div id="li_div" title="Linkedin UNIP">
+
+		                    <a><img id="li" src="imagens/li.png" class="icone"></a>
+		                    <a href="https://www.linkedin.com/school/unip/" target="_blank">
+		                        <img id="lihover" src="imagens/lihover.png" class="icone" style="display: none;">
+		                    </a>
+
+		                </div>
+	                
+	            	</div>
+
+	            	<div class="row my-4 justify-content-start">
+	            		<div class="col-lg-9">
+
+	            			<h6 style="margin-right: 3.5rem;">Menu</h6>
+	            			<button class="dropdown-btn">Palestras 
+	            				<img src="imagens/droprodape.png">
+	            			</button>
+	            			<div class="dropdown-container">
+	            				<a href="palestras_matutino.html#evento">Matutino</a><br>
+	            				<a href="palestras_noturno.html#evento">Noturno</a>
+	            			</div>
+
+	            			<button class="dropdown-btn my-2">Minicursos 
+	            				<img src="imagens/droprodape.png">
+	            			</button>
+	            			<div class="dropdown-container">
+	            				<a href="minicursos_matutino.html#evento">Matutino</a><br>
+	            				<a href="minicursos_noturno.html#evento">Noturno</a>
+	            			</div>
+
+	            			<style type="text/css">
+	            				.dropdown-btn img {
+	            					width: 10px;
+	            					height: 10px;
+	            				}
+
+	            				.dropdown-container a {
+	            					color: white;
+	            				}
+	            			</style>
+	            			
+	            		</div>
+	            	</div>
+
+	            	<style>
+		            	
+						.dropdown-btn {
+		            		text-decoration: none;
+		            		font-size: 1rem;
+		            		color: white;
+		            		display: block;
+		            		border: none;
+		            		background: black;
+		            		width: 7rem;
+		            		text-align: left;
+		            		cursor: pointer;
+		            		outline: none;
+		            	}
+
+		            	
+		            	.dropdown-btn:hover {
+		            		color: lightblue;
+		            	}
+
+		            	
+		            	.active {
+		            		background-color: black;
+		            		color: white;
+		            	}
+
+		            	
+		            	.dropdown-container {
+		            		display: none;
+		            		background-color: black;
+		            		padding-right: 2rem;
+		            	}
+
+	            	</style>
+
+	            	<script>
+	            		var dropdown = document.getElementsByClassName("dropdown-btn");
+	            		var i;
+
+	            		for (i = 0; i < dropdown.length; i++) {
+	            			dropdown[i].addEventListener("click", function() {
+	            				this.classList.toggle("active");
+	            				var dropdownContent = this.nextElementSibling;
+	            				if (dropdownContent.style.display === "block") {
+	            					dropdownContent.style.display = "none";
+	            				} else {
+	            					dropdownContent.style.display = "block";
+	            				}
+	            			});
+	            		}
+	            	</script>
+
+	                <style type="text/css">
+	                    .icone {
+	                        width: 40px;
+	                        height: 40px;
+	                    }
+	                </style>
+	                
+	            </div>
+                
+	        </div>
+
+            <div class="row justify-content-center">
+                
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                    <a>&copy 2018 - Todos os direitos reservados</a>    
+                </div>
+
+            </div>
+	    </div>
+    </div>
+    </div>
+	
+</body>
+</html>

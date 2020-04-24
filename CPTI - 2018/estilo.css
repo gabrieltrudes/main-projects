@@ -1,0 +1,167 @@
+body{
+	background-color: lightgray;
+	background-image: url(imagens/fundo.png);
+	background-size: cover;
+	background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+}
+
+#conteudo {
+	margin-top: 7rem;
+}
+
+#logo {
+	margin-left: 3rem;
+}
+
+#sub_titu {
+	font-family: 'Oswald', sans-serif;
+	color: ghostwhite;
+    font-size: 2.2rem;
+    font-weight: 500;
+}
+
+#btn_info {
+	margin-top: 12rem;
+	font-size: 1.3rem;
+	background-color: #465C8B;
+	color: white;
+	transition-duration: 0.2s;
+	border: 0.1rem solid #465C8B;
+    font-family: 'Oswald', sans-serif;
+}
+
+#btn_info:hover {
+	background-color: #A4D555;
+	color: black;
+	transition-duration: 0.2s;
+	border: 0.1rem solid #A4D555;
+}
+
+.icone_btn {
+	width: 1.5rem;
+	height: 1.5rem;
+	margin-bottom: 0.2rem;
+}
+
+#rodape {
+	background-color: black;
+	color: white;
+	padding: 1rem;
+	
+}
+
+.rodape {
+	padding-top: 30%;
+}
+
+#mapa {
+	position: relative;
+	padding-bottom: 57.142857142857%;
+	height: 0;
+}
+
+#mapa iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+#link_unip img{
+	margin-bottom: 0.2rem;
+}
+
+#link_unip:hover img {
+	width: 16px;
+	height: 16px;
+}
+
+
+/* Ajustes media queries */
+/* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) { 
+
+	#logo {
+		margin-top: 3rem;
+		margin-left: 0rem;
+	}
+
+	#btn_info {
+		margin-top: 3rem;
+		font-size: 1.1rem;
+	}
+
+	#conteudo {
+		margin-top: 1rem;
+	}
+
+	.rodape {
+		padding-top: 42%;
+	}
+
+	#link_unip img {
+		display: none;
+	}
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) and (max-width: 767.98px) { 
+
+	#logo {
+		margin-top: 0;
+		margin-left: 2.5rem;
+	}
+
+	#btn_info {
+		margin-top: 13rem;
+		margin-left: -1rem;
+	}
+
+	#link_unip img {
+		display: none;
+	}
+
+	.rodape {
+		padding-top: 34%;
+	}
+
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 991.98px) { 
+
+	.rodape {
+		padding-top: 25vh;
+	}
+
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) and (max-width: 1199.98px) { 
+
+	.rodape {
+		padding-top: 45vh;
+	}
+
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) { 
+
+}
+
+@media (min-width: 1440.1px) { 
+
+	#selecionar_periodo {
+		margin-left: -25rem;
+	}
+
+	.rodape {
+		padding-top: 49vh;
+	}
+
+}

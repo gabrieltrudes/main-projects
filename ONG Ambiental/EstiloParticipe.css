@@ -1,0 +1,147 @@
+body{
+    margin: 0px auto;
+    font-size: 0.85em;
+    font-family:  Quicksand;
+    background: url('IBAGENS/FontCandy%20(7).png');
+    background-size: cover;
+}
+                                    /* ↓MENU↓*/
+nav{
+    margin: 0;
+    position: fixed;
+    width: 100%;
+    background-color: black;
+    text-align: right;
+    
+}
+nav ul {
+    list-style-type: none;
+    margin-top: -1.2em;
+    margin-bottom: 0em;
+}
+
+nav ul li {
+    display: inline-block;
+    padding: 1em;
+    cursor: pointer;   
+}
+
+nav ul li a {
+    padding: 0.93em;
+    display: block;
+    color: white;
+    text-decoration: none;   
+}
+    
+nav ul li:hover {
+    background-color: #113811;
+    transition-duration: 0.8s;
+    
+}
+
+nav ul ul{
+    position: absolute;
+    width: 15%;
+    background: black;
+    margin-top: 1em;
+    margin-left: -1.0em;
+    padding: 0em;
+    text-align: left;
+    display: none;
+}
+    
+ nav ul ul li {
+ display: block;
+}
+
+nav ul li:hover > ul { 
+    display: block;
+    }
+
+div.LOGO{
+    position: absolute;
+    padding: 1.0ex 5ex;
+    height: 9.5ex;
+    float: left;      
+}
+                                  /* FIM DO MENU*/
+
+
+section.sec2{
+    width: 100%;
+    height: 5vh;
+    background-size: cover;
+    background-position: center;
+}
+
+.content{
+    margin-top: 1%;
+}
+
+.content p{
+    width: 96ex;
+    margin-top: 3ex;
+    padding: 1ex 1ex 3ex 23ex;
+    text-align: justify;
+    font-size: 1.2rem;
+    line-height: 3.8ex;
+}
+
+
+input[type=text], select, textarea {
+    width: 100%;
+    padding: 1.2em;
+    border: 0.1em solid #ccc;
+    border-radius: 0.5em;
+    box-sizing: border-box;
+    margin-bottom: 1em;
+    resize: vertical;
+}
+
+input[type=submit] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 1.1em 1.5em;
+    border: none;
+    border-radius: 0.4em;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: #055105;
+}
+
+.container {
+    border-radius: 0.5em;
+    background-color: #f2f2f2;
+    padding: 1.5em;
+}
+
+h3{
+    text-align: center;
+    padding: 3ex 1ex 0ex 1ex;
+    color: #055105; 
+    font-size: 2em;
+}
+
+                                   /* ↓RODAPÉ↓*/    
+
+footer{
+    clear:both;
+    border-top: 0.5ex solid #fff;
+    background-color: rgba(0,0,0,0.9);
+}
+
+footer p{
+    color: white;
+    text-align: center;
+    margin: 0px;
+    padding: 1ex;
+    font-size: 1.1rem;
+}  
+
+footer a{
+    color: forestgreen;
+    text-decoration: underline;
+}
+                                  /*FIM DO RODAPÉ*/

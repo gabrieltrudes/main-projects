@@ -1,0 +1,106 @@
+body{
+    margin: 0px auto;
+    font-size: 0.85em;
+    font-family:  Quicksand;
+    background-color: #f3f3f3;
+}
+                                    /* ↓MENU↓*/
+nav{
+    margin: 0;
+    position: fixed;
+    width: 100%;
+    background-color: black;
+    text-align: right;
+    z-index: 1;
+    
+}
+nav ul {
+    list-style-type: none;
+    margin-top: -1.2em;
+    margin-bottom: 0em;
+}
+
+nav ul li {
+    display: inline-block;
+    padding: 1em;
+    cursor: pointer;   
+}
+
+nav ul li a {
+    padding: 0.93em;
+    display: block;
+    color: white;
+    text-decoration: none;   
+}
+    
+nav ul li:hover {
+    background-color: #113811;
+    transition-duration: 0.8s;
+    
+}
+
+nav ul ul{
+    position: absolute;
+    width: 15%;
+    background: black;
+    margin-top: 1em;
+    margin-left: -1.0em;
+    padding: 0em;
+    text-align: left;
+    display: none;
+}
+    
+ nav ul ul li {
+ display: block;
+}
+
+nav ul li:hover > ul { 
+    display: block;
+    }
+
+div.LOGO{
+    position: absolute;
+    padding: 1.0ex 5ex;
+    height: 9.5ex;
+    float: left;      
+}
+                                  /* FIM DO MENU*/
+.imagem{
+    position: relative;
+    margin-top: 6%;
+    float: left;
+    margin-left: 15%;
+}
+.fotos{
+    height: 200px; 
+    width: 320px;
+    border-color: black;
+}
+
+.fotos:hover {
+    height: 240px;
+    width: 384px;
+    transition: 2s;
+}
+                         
+                                    /* ↓RODAPÉ↓*/    
+
+footer{
+    clear:both;
+    border-top: 0.5ex solid #fff;
+    background-color: rgba(0,0,0,0.9);
+}
+
+footer p{
+    color: white;
+    text-align: center;
+    margin: 0px;
+    padding: 1ex;
+    font-size: 1.1rem;
+}  
+
+footer a{
+    color: forestgreen;
+    text-decoration: underline;
+}
+                                  /*FIM DO RODAPÉ*/
